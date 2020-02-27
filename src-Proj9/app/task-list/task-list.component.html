@@ -1,0 +1,36 @@
+<section class="container-fluid bg-light p-5">
+    <h3>Tasks List</h3>
+
+    <div class="card" *ngIf="tasks.length==0">
+        <p class="card-text">No Tasks Found</p>
+    </div>
+
+    <table class="table table-stripped table-bordered">
+        <thead>
+            <tr>
+                <th>Task Id</th>
+                <th>Task Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of contacts">
+                <td>{{c.taskID}}</td>
+                <td>{{c.taskName}} </td>
+                <td>{{c.startDate|date:'dd-MM-yyyy'}}</td>
+                <td>{{c.endDate|date:'dd-MM-yyyy'}}</td>
+                <td>
+                    <a class="btn btn-info btn-sm mr-2" routerLink="/details/{{c.taskId}}">DETAILS</a>
+                    <a class="btn btn-warning btn-sm mr-2" [routerLink]="'/edit/'+c.taskId">EDIT</a>
+                    <a class="btn btn-danger btn-sm mr-2" (click)="delete(c.taskId)">DELETE</a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4"><strong>{{tasks.length}} contacts.</strong></th>
+            </tr> 
+        </tfoot>
+    </table>
+</section>
