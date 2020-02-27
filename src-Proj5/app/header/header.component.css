@@ -1,0 +1,18 @@
+header{
+    background-color: indianred;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px; 
+}
+header>div>img{
+    width: 70px;
+}
+header>div img header>div h3{
+    display: inline-block;
+}
+h2{
+    color:rebeccapurple;
+}
+h3{
+    color: whitesmoke;
+}

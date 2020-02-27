@@ -1,0 +1,17 @@
+nav{
+    background-color: rgba(211, 120, 9, 0.925);
+    color: whitesmoke;
+    padding: 10px;
+}
+nav a{
+    border-radius: 10%;
+    border:1px solid burlywood;
+    margin:3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+}
+nav a:hover{
+    background-color: cornsilk;
+    color: darkgreen;
+}
